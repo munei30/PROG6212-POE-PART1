@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MonthlyClaimSystemPrototype")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e298726d050205e6d5e620d09b4f3ba7210971ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f67afd126d5bd55410ff6a466af286b157acd02")]
 [assembly: System.Reflection.AssemblyProductAttribute("MonthlyClaimSystemPrototype")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MonthlyClaimSystemPrototype")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
