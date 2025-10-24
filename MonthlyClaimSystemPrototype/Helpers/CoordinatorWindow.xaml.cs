@@ -1,54 +1,34 @@
-﻿
-using System.Collections.ObjectModel;
-using System.ComponentModel;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Input;
-using MonthlyClaimSystemPrototype.Models;
+using MonthlyClaimSystemPrototype.Models; // ✅ Add this line
 
 namespace MonthlyClaimSystemPrototype
 {
-    public partial class CoordinatorWindow : Window, INotifyPropertyChanged
+    public partial class CoordinatorWindow : Window
     {
-        public ObservableCollection<Claim> Claims { get; }
+        private ObservableCollection<Claim> claims;
 
-        private Claim? _selectedClaim;
-        public Claim? SelectedClaim
-        {
-            get => _selectedClaim;
-            set
-            {
-                _selectedClaim = value;
-                OnPropertyChanged(nameof(SelectedClaim));
-                CommandManager.InvalidateRequerySuggested();
-            }
-        }
-
-        public ICommand ApproveCommand { get; }
-        public ICommand RejectCommand { get; }
-
-        public CoordinatorWindow(ObservableCollection<Claim> claims)
+        public CoordinatorWindow(ObservableCollection<Claim> sharedClaims)
         {
             InitializeComponent();
-
-            Claims = claims;
-
-            ApproveCommand = new RelayCommand(param =>
-            {
-                var claim = param as Claim ?? SelectedClaim;
-                if (claim != null) claim.Status = "Approved";
-            }, param => (param as Claim) != null || SelectedClaim != null);
-
-            RejectCommand = new RelayCommand(param =>
-            {
-                var claim = param as Claim ?? SelectedClaim;
-                if (claim != null) claim.Status = "Rejected";
-            }, param => (param as Claim) != null || SelectedClaim != null);
-
-            DataContext = this;
+            claims = sharedClaims;
+            dgClaims.ItemsSource = claims;
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-        protected void OnPropertyChanged(string name) =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        private void Approve_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgClaims.SelectedItem is Claim selectedClaim)
+                selectedClaim.Status = ClaimStatus.Approved; // ✅ Use enum instead of string
+        }
+
+        private void Reject_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgClaims.SelectedItem is Claim selectedClaim)
+                selectedClaim.Status = ClaimStatus.Rejected; // ✅ Use enum instead of string
+        }
+
+        private void dgClaims_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+        }
     }
 }

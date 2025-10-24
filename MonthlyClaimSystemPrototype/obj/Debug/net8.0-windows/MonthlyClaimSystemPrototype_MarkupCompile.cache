@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\RC_Student_lab\Documents\GitHub\PROG6212-POE-PART1\MonthlyClaimSystemPrototype\obj\Debug\net8.0-windows\
+C:\Users\RC_Student_Lab\Desktop\poe (2)\poe\PROG6212-POE-PART1\PROG6212-POE-PART1\MonthlyClaimSystemPrototype\obj\Debug\net8.0-windows\
 MonthlyClaimSystemPrototype
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\RC_Student_lab\Documents\GitHub\PROG6212-POE-PART1\MonthlyClaimSystemPrototype\App.xaml
-2-2085392177
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Users\RC_Student_Lab\Desktop\poe (2)\poe\PROG6212-POE-PART1\PROG6212-POE-PART1\MonthlyClaimSystemPrototype\App.xaml
+4-1160416674
 
-10-985106531
-198-352714763
-Helpers\CoordinatorWindow.xaml;MainWindow.xaml;
+12-858450368
+198-2136442823
+Helpers\CoordinatorWindow.xaml;MainWindow.xaml;Views\AdminView.xaml;Views\LecturerView.xaml;
 
 False
 

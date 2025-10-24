@@ -1,0 +1,22 @@
+﻿<Window x:Class="MonthlyClaimSystemPrototype.LecturerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Lecturer Claim Submission" Height="600" Width="500">
+
+    <Grid Margin="20">
+        <StackPanel Margin="0,0,0,10">
+            <!-- Replaced PlaceholderText with ToolTip -->
+            <TextBox x:Name="txtLecturer" Margin="0,10" ToolTip="Enter Lecturer Name"/>
+            <TextBox x:Name="txtHours" Margin="0,10" ToolTip="Enter Hours Worked"/>
+            <TextBox x:Name="txtRate" Margin="0,10" ToolTip="Enter Hourly Rate"/>
+            <TextBox x:Name="txtNotes" Margin="0,10" ToolTip="Enter Notes" Height="80" AcceptsReturn="True"/>
+
+            <Label x:Name="lblFileName" Content="No file selected" Margin="0,10"/>
+
+            <Button x:Name="btnUpload" Content="Upload Document" Click="btnUpload_Click" Margin="0,10"/>
+            <Button x:Name="btnSubmit" Content="Submit Claim" Click="btnSubmit_Click" Margin="0,10"/>
+
+            <Label x:Name="lblStatus" Content="" Margin="0,10" Foreground="Green"/>
+        </StackPanel>
+    </Grid>
+</Window>

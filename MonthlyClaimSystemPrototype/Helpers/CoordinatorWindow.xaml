@@ -1,41 +1,12 @@
-﻿<!-- CoordinatorWindow.xaml -->
-<Window x:Class="MonthlyClaimSystemPrototype.CoordinatorWindow"
+﻿<Window x:Class="MonthlyClaimSystemPrototype.CoordinatorWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Program Coordinator - Claim Review" Height="500" Width="900"
-        Background="#FF2C3E50" FontFamily="Segoe UI">
-    <Grid Margin="20">
-        <StackPanel>
-            <TextBlock Text="Program Coordinator Dashboard"
-                       FontSize="24" FontWeight="Bold"
-                       Foreground="#FFCE93D8" HorizontalAlignment="Center" Margin="0,0,0,20"/>
-
-            <DataGrid ItemsSource="{Binding Claims}"
-                      SelectedItem="{Binding SelectedClaim, Mode=TwoWay}"
-                      AutoGenerateColumns="False"
-                      Height="320"
-                      Background="#FF34495E" Foreground="#FFCE93D8"
-                      RowBackground="#FF3E5369" AlternatingRowBackground="#FF2E4053"
-                      GridLinesVisibility="None" FontSize="14">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding ClaimID}" Width="Auto"/>
-                    <DataGridTextColumn Header="Month" Binding="{Binding Month}" Width="*"/>
-                    <DataGridTextColumn Header="Amount" Binding="{Binding Amount}" Width="*"/>
-                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
-                    <DataGridTextColumn Header="Submitted On" Binding="{Binding SubmissionDate}" Width="*"/>
-                </DataGrid.Columns>
-            </DataGrid>
-
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                <Button Content="Approve" Width="120" Margin="10,0"
-                        Command="{Binding ApproveCommand}"
-                        CommandParameter="{Binding SelectedClaim}"
-                        Background="#FF4CAF50" Foreground="White" FontWeight="Bold"/>
-                <Button Content="Reject" Width="120" Margin="10,0"
-                        Command="{Binding RejectCommand}"
-                        CommandParameter="{Binding SelectedClaim}"
-                        Background="#FFF44336" Foreground="White" FontWeight="Bold"/>
-            </StackPanel>
+        Title="Coordinator Dashboard" Height="400" Width="600">
+    <Grid Background="#1E2A38">
+        <DataGrid x:Name="dgClaims" ItemsSource="{Binding}" AutoGenerateColumns="True" Margin="10" SelectionChanged="dgClaims_SelectionChanged" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
+            <Button Content="Approve" Width="100" Margin="10" Click="Approve_Click"/>
+            <Button Content="Reject" Width="100" Margin="10" Click="Reject_Click"/>
         </StackPanel>
     </Grid>
 </Window>

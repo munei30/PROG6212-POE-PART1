@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RC_Student_lab\\Documents\\GitHub\\PROG6212-POE-PART1\\MonthlyClaimSystemPrototype\\MonthlyClaimSystemPrototype.csproj": {}
+    "C:\\Users\\RC_Student_Lab\\Desktop\\poe (2)\\poe\\PROG6212-POE-PART1\\PROG6212-POE-PART1\\MonthlyClaimSystemPrototype\\MonthlyClaimSystemPrototype.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RC_Student_lab\\Documents\\GitHub\\PROG6212-POE-PART1\\MonthlyClaimSystemPrototype\\MonthlyClaimSystemPrototype.csproj": {
+    "C:\\Users\\RC_Student_Lab\\Desktop\\poe (2)\\poe\\PROG6212-POE-PART1\\PROG6212-POE-PART1\\MonthlyClaimSystemPrototype\\MonthlyClaimSystemPrototype.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RC_Student_lab\\Documents\\GitHub\\PROG6212-POE-PART1\\MonthlyClaimSystemPrototype\\MonthlyClaimSystemPrototype.csproj",
+        "projectUniqueName": "C:\\Users\\RC_Student_Lab\\Desktop\\poe (2)\\poe\\PROG6212-POE-PART1\\PROG6212-POE-PART1\\MonthlyClaimSystemPrototype\\MonthlyClaimSystemPrototype.csproj",
         "projectName": "MonthlyClaimSystemPrototype",
-        "projectPath": "C:\\Users\\RC_Student_lab\\Documents\\GitHub\\PROG6212-POE-PART1\\MonthlyClaimSystemPrototype\\MonthlyClaimSystemPrototype.csproj",
-        "packagesPath": "C:\\Users\\RC_Student_lab\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RC_Student_lab\\Documents\\GitHub\\PROG6212-POE-PART1\\MonthlyClaimSystemPrototype\\obj\\",
+        "projectPath": "C:\\Users\\RC_Student_Lab\\Desktop\\poe (2)\\poe\\PROG6212-POE-PART1\\PROG6212-POE-PART1\\MonthlyClaimSystemPrototype\\MonthlyClaimSystemPrototype.csproj",
+        "packagesPath": "C:\\Users\\RC_Student_Lab\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\RC_Student_Lab\\Desktop\\poe (2)\\poe\\PROG6212-POE-PART1\\PROG6212-POE-PART1\\MonthlyClaimSystemPrototype\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\RC_Student_lab\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\RC_Student_Lab\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -69,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

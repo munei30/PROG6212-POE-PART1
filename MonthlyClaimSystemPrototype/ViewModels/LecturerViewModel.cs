@@ -1,39 +1,42 @@
-﻿using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Windows.Input;
+﻿using System;
+using System.Collections.ObjectModel;
+using MonthlyClaimSystemPrototype.Models;
+using MonthlyClaimSystemPrototype.Services;
 
-namespace MonthlyClaimSystemPrototype
+namespace MonthlyClaimSystemPrototype.ViewModels
+
 {
-    public class LecturerViewModel : INotifyPropertyChanged
+    public class LecturerViewModel
     {
-        public ObservableCollection<Claim> Claims { get; set; } = new();
-        public Claim NewClaim { get; set; } = new();
+        private readonly ClaimService _claimService;
 
-        public ICommand SubmitCommand { get; set; }
+        public ObservableCollection<Claim> Claims { get; set; }
 
         public LecturerViewModel()
         {
-            SubmitCommand = new RelayCommand(_ => SubmitClaim());
+            _claimService = new ClaimService();
+            Claims = new ObservableCollection<Claim>(_claimService.GetAll());
         }
 
-        private void SubmitClaim()
+        public void SubmitClaim(string lecturerName, double hoursWorked, double hourlyRate, string notes, string documentPath)
         {
-            Claims.Add(new Claim
+            decimal totalAmount = (decimal)(hoursWorked * hourlyRate);
+
+            var claim = new Claim
             {
-                ClaimID = Claims.Count + 1,
-                Month = NewClaim.Month,
-                Amount = NewClaim.Amount,
-                Status = "Submitted"
-            });
+                LecturerName = lecturerName,
+                HoursWorked = hoursWorked,
+                HourlyRate = hourlyRate,
+                Notes = notes,
+                Description = notes,
+                Amount = totalAmount,
+                SubmissionDate = DateTime.Now,
+                DocumentPath = documentPath,
+                Status = ClaimStatus.Pending
+            };
 
-            NewClaim = new Claim();
-            OnPropertyChanged(nameof(NewClaim));
+            _claimService.AddClaim(claim);
+            Claims.Add(claim);
         }
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        protected void OnPropertyChanged(string prop) =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
     }
 }
-
